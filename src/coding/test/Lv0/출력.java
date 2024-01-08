@@ -1,4 +1,4 @@
-package coding.test;
+package coding.test.Lv0;
 
 // [PCCE 기출문제] 1번 / 출력
 
