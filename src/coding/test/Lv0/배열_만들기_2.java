@@ -18,7 +18,7 @@ public class 배열_만들기_2 {
             }
         }
         if(answer.size() == 0){
-            answer.add(Integer.valueOf("-1"));
+            answer.add(-1);
         }
         return answer;
     }
