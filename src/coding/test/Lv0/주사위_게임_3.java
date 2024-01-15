@@ -7,9 +7,9 @@ public class 주사위_게임_3 {
     public int solution(int a, int b, int c, int d) {
         int answer = 0;
         if(a==b && b==c && c==d){
-            answer = 1111 * 2;
+            answer = 1111 * a;
         } else if (a==b && b==c) {
-            answer = (10*a+d) * (10*a+d);
+            answer = ((10*a+d) * (10*a+d));
         } else if (a == c && c == d) {
             answer =  ((10 * a + b) * (10 * a + b));
         } else if (a == b && b == d) {
