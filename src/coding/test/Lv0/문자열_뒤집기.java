@@ -3,15 +3,9 @@ package coding.test.Lv0;
 
 public class 문자열_뒤집기 {
     public String solution(String my_string, int s, int e) {
-        String answer = "";
-        String one = my_string.substring(0,s);
-        String two = my_string.substring(e+1);
-        String aa = "";
-        for(int i=e; i>=s; i--){
-            aa += my_string.charAt(i);
-        }
-        answer = one + aa + two;
-        return answer;
+        StringBuilder answer = new StringBuilder(my_string.substring(s, e+1));
+        answer.reverse();
+        return my_string.substring(0, s) + answer + my_string.substring(e+1);
     }
 
     public static void main(String[] args) {
