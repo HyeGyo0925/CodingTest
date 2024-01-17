@@ -4,17 +4,9 @@ package coding.test.Lv0;
 public class 세로_읽기 {
     public String solution(String my_string, int m, int c) {
         String answer = "";
-        String[][] test = new String[my_string.length()/m][m];
-        int i = 0;
-            for(int a=0; a<my_string.length()/m; a++){
-                for(int b=0; b<m; b++){
-                    test[a][b] = String.valueOf(my_string.charAt(i));
-                    i++;
-                }
-            }
 
-        for(int a=0; a<my_string.length()/m; a++){
-            answer += test[a][c-1];
+        for(int i = c-1; i<my_string.length(); i+=m){
+            answer += my_string.charAt(i);
         }
         return answer;
     }
