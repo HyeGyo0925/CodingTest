@@ -11,6 +11,7 @@ public class 가장_가까운_같은_글자 {
 
             for(int j = i-1; j>=0; j--){
                 if(str[j].equals(str[i])){
+                    System.out.println(i + " " + j);
                     answer[i] = i-j;
                     break;
                 }
