@@ -5,10 +5,10 @@ public class 크기가_작은_부분문자열 {
         int answer = 0;
         int len = p.length();
         int i = 0;
-        int pp = Integer.parseInt(p);
+        long pp = Long.parseLong(p);
 
         while (i != t.length() - len + 1){
-            int num = Integer.parseInt(t.substring(i, i + len));
+            long num = Long.parseLong(t.substring(i, i + len));
             if(num <= pp){
                 answer++;
             }
