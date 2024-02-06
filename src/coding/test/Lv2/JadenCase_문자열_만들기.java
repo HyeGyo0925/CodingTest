@@ -3,18 +3,24 @@ package coding.test.Lv2;
 public class JadenCase_문자열_만들기 {
     public String solution(String s) {
         String answer = "";
-        String[] str = s.split(" ");
 
-        for(int i=0; i<str.length; i++){
-            String first = String.valueOf(str[i].charAt(0)).toUpperCase();
-            String second = "";
-            for(int a=1; a<str[i].length(); a++){
-                String ss = String.valueOf(str[i].charAt(a));
-                second += ss.toLowerCase();
+        String[] arr = s.split(" ");
+        for(int i=0; i<arr.length; i++) {
+            String now = arr[i];
+            if(arr[i].length() == 0) {
+                answer += " ";
             }
-            answer += first+second + " ";
+            else {
+                answer += now.substring(0, 1).toUpperCase();
+                answer += now.substring(1, now.length()).toLowerCase();
+                answer += " ";
+            }
 
         }
+        if(s.substring(s.length()-1, s.length()).equals(" ")){
+            return answer;
+        }
+
         answer = answer.substring(0, answer.length()-1);
         return answer;
     }
