@@ -3,20 +3,19 @@ package coding.test.Lv1;
 public class 카드_뭉치 {
     public String solution(String[] cards1, String[] cards2, String[] goal) {
         String answer = "Yes";
-        int card1Index = 0;
-        int card2Index = 0;
+        int card1Idx = 0;
+        int card2Idx = 0;
 
-        for(int i=0; i< goal.length; i++){
-            if(card1Index < cards1.length && goal[i].equals(cards1[card1Index])) {
-                card1Index++;
-                continue;
-            }
+        for(int i=0; i<goal.length; i++){
+            String target = goal[i];
 
-            if(card2Index < cards2.length && goal[i].equals(cards2[card2Index])) {
-                card2Index++;
-                continue;
+            if(card1Idx < cards1.length && target.equals(cards1[card1Idx])){
+                card1Idx++;
+            } else if (card2Idx < cards2.length && target.equals(cards2[card2Idx])) {
+                card2Idx++;
+            }else {
+                return answer = "No";
             }
-            answer = "No";
         }
 
         return answer;
@@ -25,5 +24,6 @@ public class 카드_뭉치 {
     public static void main(String[] args) {
         카드_뭉치 aa = new 카드_뭉치();
         System.out.println(aa.solution(new String[]{"i", "drink", "water"}, new String[]{"want", "to"}, new String[]{"i", "want", "to", "drink", "water"}));
+        System.out.println(aa.solution(new String[]{"i", "water", "drink"}, new String[]{"want", "to"}, new String[]{"i", "want", "to", "drink", "water"}));
     }
 }
